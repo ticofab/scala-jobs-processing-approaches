@@ -1,4 +1,4 @@
-name := "jobs-processing-approaches"
+name := "scala-jobs-processing-approaches"
 
 version := "1.0"
 
@@ -15,7 +15,10 @@ libraryDependencies ++= Seq(
   // webserver stuff
   "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
   "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-  "io.spray" %% "spray-json" % "1.3.3"
+  "io.spray" %% "spray-json" % "1.3.3",
+
+  // rx scala
+  "io.reactivex" %% "rxscala" % "0.26.5"
 
   // "com.typesafe.akka" %% "akka-actor" % akkaVersion,
 )

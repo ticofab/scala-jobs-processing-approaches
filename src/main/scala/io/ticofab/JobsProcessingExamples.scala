@@ -10,9 +10,14 @@ import com.typesafe.scalalogging.LazyLogging
   */
 trait Config {
   private val config = ConfigFactory.load()
-  val cycles = config.getInt("cycles")
-  val append = config.getInt("append")
+  protected val cycles = config.getInt("cycles")
+  protected val appendTimes = config.getInt("append")
+  protected val multiplyTimes = config.getInt("multiply")
+  protected val uploadAvgMillis = config.getInt("upload-avg-millis")
+  protected val uploadFailProb = config.getDouble("upload-fail-prob")
 }
+
+case class Item(name: String)
 
 object JobsProcessingExamples extends App with Config with LazyLogging {
 

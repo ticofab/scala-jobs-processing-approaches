@@ -16,7 +16,7 @@ case class Response(worker: String,
 
 object WebServer extends HttpApp with Config with LazyLogging with SprayJsonSupport with DefaultJsonProtocol {
   val plain = new PlainScala
-  val string = "abcdefghjklmnopqrstuvwxyz"
+  val string = "abcdefghijklmnopqrstuvwxyz"
   implicit val responseFormat = jsonFormat3(Response)
 
   private def getResponse(worker: String, millis: Long): Response = {
